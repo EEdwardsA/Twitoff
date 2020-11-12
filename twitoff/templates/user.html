@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div id = "user-info">
+    <!-- User title-->
+    <h2>{{ title }}</h2>
+    <p>{{ message }}</p>
+</div>
+
+<div id ="user-tweets">
+    <!--prints each tweet-->
+    {% for tweet in tweets[::-1] %}
+    <span class="stack">
+        {{ tweet.text }}
+    </span>
+    {% endfor %}
+</div>
+{% endblock %}
